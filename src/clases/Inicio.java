@@ -5,6 +5,7 @@
  */
 package clases;
 
+import conector.MySqlConn;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -14,12 +15,18 @@ import javax.swing.JPanel;
  * @author nihil
  */
 public class Inicio extends javax.swing.JFrame {
-
+    MySqlConn conn=new MySqlConn();
     /**
      * Creates new form Inicio
      */
     public Inicio() {
         initComponents();
+        this.setLocationRelativeTo(null);
+    }
+
+    public Inicio(MySqlConn objconn) {
+        this.conn=objconn;
+          initComponents();
         this.setLocationRelativeTo(null);
     }
 
