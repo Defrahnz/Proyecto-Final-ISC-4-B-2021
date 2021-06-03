@@ -13,6 +13,7 @@ import conector.MySqlConn;
  * @author nihil
  */
 public class Main {
+    //Este es un cambio
     MySqlConn objconn=new MySqlConn();
     public Main(){
         new Inicio(objconn).setVisible(true);
