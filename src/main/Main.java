@@ -20,5 +20,8 @@ public class Main {
     }
     public static void main(String[] args) {
         new Main();
+       // Principal P = new Principal();
+       // P.setVisible(true);
+        
     }
 }
