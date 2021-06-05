@@ -36,74 +36,48 @@ public class Ingresar extends javax.swing.JFrame {
         jTextField_ingresarUsuario = new javax.swing.JTextField();
         jPasswordField_ingresarUsuario = new javax.swing.JPasswordField();
         jButton_ingresarUsuario = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("INGRESAR");
 
         jPanel_principal.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel_principal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
-        jLabel1.setText("Contraseña");
+        jLabel1.setText("Contraseña:");
+        jPanel_principal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 96, 36));
 
         jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jLabel2.setText("Usuario:");
+        jPanel_principal.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, 96, 36));
 
         jTextField_ingresarUsuario.setFont(new java.awt.Font("Britannic Bold", 0, 13)); // NOI18N
+        jPanel_principal.add(jTextField_ingresarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 270, -1));
+        jPanel_principal.add(jPasswordField_ingresarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 270, -1));
 
-        jButton_ingresarUsuario.setBackground(new java.awt.Color(153, 153, 153));
+        jButton_ingresarUsuario.setBackground(new java.awt.Color(204, 0, 0));
         jButton_ingresarUsuario.setFont(new java.awt.Font("Castellar", 1, 14)); // NOI18N
+        jButton_ingresarUsuario.setForeground(new java.awt.Color(255, 153, 0));
         jButton_ingresarUsuario.setText("INGRESAR");
+        jButton_ingresarUsuario.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(204, 0, 0)));
         jButton_ingresarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_ingresarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_ingresarUsuarioActionPerformed(evt);
             }
         });
+        jPanel_principal.add(jButton_ingresarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 250, 147, -1));
 
-        javax.swing.GroupLayout jPanel_principalLayout = new javax.swing.GroupLayout(jPanel_principal);
-        jPanel_principal.setLayout(jPanel_principalLayout);
-        jPanel_principalLayout.setHorizontalGroup(
-            jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_principalLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_principalLayout.createSequentialGroup()
-                        .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField_ingresarUsuario)
-                            .addComponent(jPasswordField_ingresarUsuario))
-                        .addGap(99, 99, 99))
-                    .addGroup(jPanel_principalLayout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jButton_ingresarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(169, Short.MAX_VALUE))))
-        );
-        jPanel_principalLayout.setVerticalGroup(
-            jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_principalLayout.createSequentialGroup()
-                .addContainerGap(38, Short.MAX_VALUE)
-                .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_ingresarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPasswordField_ingresarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
-                .addComponent(jButton_ingresarUsuario)
-                .addGap(34, 34, 34))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo1.jpg"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        jPanel_principal.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 460));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel_principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel_principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,6 +131,7 @@ public class Ingresar extends javax.swing.JFrame {
     private javax.swing.JButton jButton_ingresarUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel_principal;
     private javax.swing.JPasswordField jPasswordField_ingresarUsuario;
     private javax.swing.JTextField jTextField_ingresarUsuario;
