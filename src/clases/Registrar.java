@@ -5,15 +5,25 @@
  */
 package clases;
 
+import conector.MySqlConn;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author nihil
  */
 public class Registrar extends javax.swing.JFrame {
-
+    MySqlConn conn=new MySqlConn();
     /**
      * Creates new form Registrar
      */
+    
+    public Registrar(MySqlConn conn) {
+        this.conn = conn;
+         initComponents();
+        this.setLocationRelativeTo(null);
+    }
+
     public Registrar() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -119,7 +129,18 @@ public class Registrar extends javax.swing.JFrame {
 
     private void jButton_registrarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_registrarUsuarioActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
+        String user,pass,nom;
+        nom=this.jTextField_nom.getText().trim();
+        user=this.jTextField_username.getText().trim();
+        pass=String.valueOf(this.jPasswordField_pass.getPassword());
+        String part1="INSERT INTO `usuario` (`nom_usuario`, `nombre`, `contraseña`) VALUES ( " ;
+        String part2=" ' "+user+" ', ' "+nom+"  ', ' "+pass+" ' ); ";
+        String query=part1+part2;
+        int j=this.conn.Update(query);
+        JOptionPane.showMessageDialog(this, "Usuario agregado correctamente. Bienvenido "+user);
+        dispose();
+       
+        
     }//GEN-LAST:event_jButton_registrarUsuarioActionPerformed
 
     /**
