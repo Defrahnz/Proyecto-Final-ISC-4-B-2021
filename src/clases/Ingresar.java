@@ -5,12 +5,19 @@
  */
 package clases;
 
+import conector.MySqlConn;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author nihil
  */
 public class Ingresar extends javax.swing.JFrame {
-        
+
+    MySqlConn conn;
+
     /**
      * Creates new form Ingresar
      */
@@ -19,7 +26,11 @@ public class Ingresar extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
 
-   
+    public Ingresar(MySqlConn conn) {
+        this.conn = conn;
+        initComponents();
+        this.setLocationRelativeTo(null);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -89,7 +100,27 @@ public class Ingresar extends javax.swing.JFrame {
 
     private void jButton_ingresarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ingresarUsuarioActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
+        String user, pass;
+        int n = 0;
+        user = this.jTextField_ingresarUsuario.getText().trim();
+        pass = String.valueOf(this.jPasswordField_ingresarUsuario.getPassword());
+        if (!user.isEmpty()) {
+
+            String query = "SELECT * FROM `usuario` WHERE `nom_usuario`= ' " + user + " ' AND `contraseña`= ' " + pass + " ' ";
+            try {
+                this.conn.rs.last();
+                n = this.conn.rs.getRow();
+                this.conn.rs.first();
+            } catch (Exception ex) {
+                System.out.println("Error 1");
+            }
+            Menu ventana=new Menu();
+            ventana.setVisible(true);
+            dispose();
+        }else{
+              JOptionPane.showMessageDialog(this, "Este campo no puede quedar vacio");
+        }
+        
     }//GEN-LAST:event_jButton_ingresarUsuarioActionPerformed
 
     /**
