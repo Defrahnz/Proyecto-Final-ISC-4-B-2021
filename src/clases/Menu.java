@@ -35,107 +35,84 @@ public class Menu extends javax.swing.JFrame {
         jButton_consultar = new javax.swing.JButton();
         jButton_salir = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("CENTURION");
 
         jPanel1.setBackground(new java.awt.Color(255, 247, 155));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton_alta.setBackground(new java.awt.Color(204, 0, 0));
-        jButton_alta.setFont(new java.awt.Font("Castellar", 1, 14)); // NOI18N
+        jButton_alta.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
         jButton_alta.setForeground(new java.awt.Color(255, 153, 0));
         jButton_alta.setText("Nueva alta");
-        jButton_alta.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(204, 0, 0)));
+        jButton_alta.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
         jButton_alta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_alta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_altaActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton_alta, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, 162, 50));
 
         jButton_cancelar.setBackground(new java.awt.Color(204, 0, 0));
-        jButton_cancelar.setFont(new java.awt.Font("Castellar", 1, 14)); // NOI18N
+        jButton_cancelar.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
         jButton_cancelar.setForeground(new java.awt.Color(255, 153, 0));
         jButton_cancelar.setText("Cancelar");
-        jButton_cancelar.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(204, 0, 0)));
+        jButton_cancelar.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
         jButton_cancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_cancelarActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton_cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, 162, 50));
 
         jButton_consultar.setBackground(new java.awt.Color(204, 0, 0));
-        jButton_consultar.setFont(new java.awt.Font("Castellar", 1, 14)); // NOI18N
+        jButton_consultar.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
         jButton_consultar.setForeground(new java.awt.Color(255, 153, 0));
         jButton_consultar.setText("Consultar");
-        jButton_consultar.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(204, 0, 0)));
+        jButton_consultar.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
         jButton_consultar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_consultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_consultarActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton_consultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, 162, 50));
 
         jButton_salir.setBackground(new java.awt.Color(204, 0, 0));
-        jButton_salir.setFont(new java.awt.Font("Castellar", 1, 14)); // NOI18N
+        jButton_salir.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
         jButton_salir.setForeground(new java.awt.Color(255, 153, 0));
         jButton_salir.setText("Salir");
-        jButton_salir.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(204, 0, 0)));
+        jButton_salir.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
         jButton_salir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_salirActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, 162, 40));
 
         jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jLabel2.setText("Bienvenido \"USUARIO\"");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 13, 353, 33));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(328, 328, 328)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton_consultar, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton_cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton_alta, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(330, 330, 330))
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logomini.png"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 70, -1));
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton_alta, jButton_cancelar, jButton_consultar, jButton_salir});
-
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, Short.MAX_VALUE)
-                .addComponent(jButton_alta)
-                .addGap(18, 18, 18)
-                .addComponent(jButton_cancelar)
-                .addGap(31, 31, 31)
-                .addComponent(jButton_consultar)
-                .addGap(27, 27, 27)
-                .addComponent(jButton_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
-        );
-
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton_alta, jButton_cancelar, jButton_consultar, jButton_salir});
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo1.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -209,7 +186,9 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButton_cancelar;
     private javax.swing.JButton jButton_consultar;
     private javax.swing.JButton jButton_salir;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

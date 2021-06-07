@@ -47,6 +47,7 @@ public class Ingresar extends javax.swing.JFrame {
         jTextField_ingresarUsuario = new javax.swing.JTextField();
         jPasswordField_ingresarUsuario = new javax.swing.JPasswordField();
         jButton_ingresarUsuario = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -79,6 +80,10 @@ public class Ingresar extends javax.swing.JFrame {
             }
         });
         jPanel_principal.add(jButton_ingresarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 250, 147, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logomini.png"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        jPanel_principal.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 30, 70, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo1.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
@@ -163,6 +168,7 @@ public class Ingresar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel_principal;
     private javax.swing.JPasswordField jPasswordField_ingresarUsuario;
     private javax.swing.JTextField jTextField_ingresarUsuario;
