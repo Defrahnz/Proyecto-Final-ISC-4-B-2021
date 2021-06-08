@@ -5,8 +5,11 @@
  */
 package main;
 
+
+
 import clases.Inicio;
 import conector.MySqlConn;
+
 
 /**
  *
@@ -17,6 +20,7 @@ public class Main {
     MySqlConn objconn=new MySqlConn();
     public Main(){
         new Inicio(objconn).setVisible(true);
+        
     }
     public static void main(String[] args) {
         new Main();
@@ -24,4 +28,5 @@ public class Main {
        // P.setVisible(true);
         
     }
+    
 }

@@ -6,6 +6,11 @@
 package clases;
 
 import conector.MySqlConn;
+import java.awt.Color;
+import java.awt.Font;
+import static java.awt.Font.PLAIN;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -28,6 +33,26 @@ public class Inicio extends javax.swing.JFrame {
         this.conn=objconn;
           initComponents();
         this.setLocationRelativeTo(null);
+    }
+    @Override
+    public void paint (Graphics g){
+    
+      super.paint(g);
+       
+      Graphics2D g2d = (Graphics2D) g;
+      
+      //Rectangulo con bordes curculares
+      g2d.setColor(Color.RED);
+      g2d.drawRoundRect(70, 50, 350, 50, 10, 10);
+      //Circulo
+      g2d.setColor(Color.RED);
+      g2d.drawOval(430, 50, 50, 50);
+      //Escrito
+      g2d.setColor(Color.ORANGE);
+      g2d.setFont(new Font ("ARIAL",PLAIN,20));
+      g2d.drawString("Tu seguridad es nuestra prioridad", 80,80);
+      g2d.drawString("HC", 442,80);
+      
     }
 
     /**
