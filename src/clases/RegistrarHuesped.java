@@ -39,6 +39,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        tipohabiradiobutton = new javax.swing.ButtonGroup();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -46,11 +47,19 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jTextFieldNombreH = new javax.swing.JTextField();
         jTextFieldTelefonoH = new javax.swing.JTextField();
-        jTextFieldDomicilioH = new javax.swing.JTextField();
-        jTextFieldNacimientoH = new javax.swing.JTextField();
-        jTextFieldCurpH = new javax.swing.JTextField();
+        jTextFieldUbicacion = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jButtonRegistrarH = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jTextFieldtiempoHospedaje = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jListNumPersonas = new javax.swing.JList<>();
+        jRadioButtonsencilla = new javax.swing.JRadioButton();
+        jRadioButtondoble = new javax.swing.JRadioButton();
+        jRadioButtontriple = new javax.swing.JRadioButton();
+        jCalendarFechaRegistro = new com.toedter.calendar.JCalendar();
+        jButtonVerHabit = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,16 +75,16 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
-        jLabel4.setText("Domicilio");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, -1, -1));
+        jLabel4.setText("Nos visita de");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
-        jLabel5.setText("Fecha de nacimiento");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, -1, -1));
+        jLabel5.setText("Fecha de registro");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 140, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
-        jLabel6.setText("Curp");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, -1, -1));
+        jLabel6.setText("Tipo de habitacion");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, -1, -1));
 
         jTextFieldNombreH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,14 +100,12 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         });
         getContentPane().add(jTextFieldTelefonoH, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, 260, 30));
 
-        jTextFieldDomicilioH.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldUbicacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldDomicilioHActionPerformed(evt);
+                jTextFieldUbicacionActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldDomicilioH, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 260, 30));
-        getContentPane().add(jTextFieldNacimientoH, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 260, 30));
-        getContentPane().add(jTextFieldCurpH, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, 260, 30));
+        getContentPane().add(jTextFieldUbicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 260, 30));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logomini.png"))); // NOI18N
         jLabel7.setText("jLabel7");
@@ -116,6 +123,45 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonRegistrarH, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 340, 100, 40));
 
+        jLabel10.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
+        jLabel10.setText("Tiempo de hospedaje");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 290, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
+        jLabel11.setText("No. de personas");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 320, -1, -1));
+        getContentPane().add(jTextFieldtiempoHospedaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 290, 30, 20));
+
+        jListNumPersonas.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jListNumPersonas);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 320, 70, 60));
+
+        tipohabiradiobutton.add(jRadioButtonsencilla);
+        jRadioButtonsencilla.setText("Sencilla");
+        jRadioButtonsencilla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonsencillaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jRadioButtonsencilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 80, -1));
+
+        tipohabiradiobutton.add(jRadioButtondoble);
+        jRadioButtondoble.setText("Doble");
+        getContentPane().add(jRadioButtondoble, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 260, 90, -1));
+
+        tipohabiradiobutton.add(jRadioButtontriple);
+        jRadioButtontriple.setText("Triple");
+        getContentPane().add(jRadioButtontriple, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 260, 70, -1));
+        getContentPane().add(jCalendarFechaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 160, 210, 120));
+
+        jButtonVerHabit.setText("Ver habitaciones");
+        getContentPane().add(jButtonVerHabit, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, -1, -1));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo1.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 470));
@@ -127,33 +173,41 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldTelefonoHActionPerformed
 
-    private void jTextFieldDomicilioHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDomicilioHActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldDomicilioHActionPerformed
-
     private void jTextFieldNombreHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreHActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldNombreHActionPerformed
 
     private void jButtonRegistrarHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarHActionPerformed
     // TODO add your handling code here:
-    String NombreH,NumT,Dom,FechaN,Curp,Id ;
-    int id = 0;
+    String NombreH,NumT,Ubica,tiempoHosp;
+    String sencilla,doble,triple;
     NombreH = this.jTextFieldNombreH.getText().trim();
     NumT = this.jTextFieldTelefonoH.getText().trim();
-    Dom = this.jTextFieldDomicilioH.getText().trim();
-    FechaN = this.jTextFieldNacimientoH.getText().trim();
-    Curp = this.jTextFieldCurpH.getText().trim();
-    id++;
-    Id = String.valueOf(id);
+    Ubica = this.jTextFieldUbicacion.getText().trim();
+    tiempoHosp = this.jTextFieldtiempoHospedaje.getText().trim();
+    
+    sencilla = this.jRadioButtonsencilla.getText().toString();
+    doble = this.jRadioButtondoble.getText().toString();
+    triple = this.jRadioButtontriple.getText().toString();
+        System.out.println(sencilla);
+ 
             
-        String part1="INSERT INTO `huesped` (`id`, `nombre`, `no_telefono`, `domicilio`, `fec_nac`, `curp`) VALUES ( " ;
+    /*String part1="INSERT INTO `huesped` (`id`, `nombre`, `no_telefono`, `domicilio`, `fec_nac`, `curp`) VALUES ( " ;
         String part2=" ' "+Id+" ', '"+NombreH+" ', ' "+NumT+"  ', ' "+Dom+"  ', ' "+FechaN+"  ', ' "+Curp+" ' ); ";
         String query=part1+part2;
         int j=this.conn.Update(query);
         JOptionPane.showMessageDialog(this, "Huesped Registrado Correctamente "+NombreH);
         dispose();
+    */
     }//GEN-LAST:event_jButtonRegistrarHActionPerformed
+
+    private void jTextFieldUbicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUbicacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldUbicacionActionPerformed
+
+    private void jRadioButtonsencillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonsencillaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonsencillaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,17 +246,26 @@ public class RegistrarHuesped extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonRegistrarH;
+    private javax.swing.JButton jButtonVerHabit;
+    private com.toedter.calendar.JCalendar jCalendarFechaRegistro;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JTextField jTextFieldCurpH;
-    private javax.swing.JTextField jTextFieldDomicilioH;
-    private javax.swing.JTextField jTextFieldNacimientoH;
+    private javax.swing.JList<String> jListNumPersonas;
+    private javax.swing.JRadioButton jRadioButtondoble;
+    private javax.swing.JRadioButton jRadioButtonsencilla;
+    private javax.swing.JRadioButton jRadioButtontriple;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextFieldNombreH;
     private javax.swing.JTextField jTextFieldTelefonoH;
+    private javax.swing.JTextField jTextFieldUbicacion;
+    private javax.swing.JTextField jTextFieldtiempoHospedaje;
+    private javax.swing.ButtonGroup tipohabiradiobutton;
     // End of variables declaration//GEN-END:variables
 }
