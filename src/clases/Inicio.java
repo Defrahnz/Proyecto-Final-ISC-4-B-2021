@@ -135,13 +135,14 @@ public class Inicio extends javax.swing.JFrame {
         Ingresar ventana=new Ingresar();
         ventana.setVisible(true);
      //  this.setVisible(false);
-       // this.dispose();
+       dispose();
     }//GEN-LAST:event_jButton_ingresarActionPerformed
 
     private void jButton_registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_registrarActionPerformed
         // TODO add your handling code here:
         Registrar ventan=new Registrar();
         ventan.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton_registrarActionPerformed
 
     /**

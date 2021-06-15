@@ -27,6 +27,7 @@ public class Registrar extends javax.swing.JFrame {
     public Registrar() {
         initComponents();
         this.setLocationRelativeTo(null);
+        dispose();
     }
 
     /**
