@@ -30,6 +30,7 @@ public class Ingresar extends javax.swing.JFrame {
         this.conn = conn;
         initComponents();
         this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -125,7 +126,7 @@ public class Ingresar extends javax.swing.JFrame {
         }else{
               JOptionPane.showMessageDialog(this, "Este campo no puede quedar vacio");
         }
-        
+        dispose();
     }//GEN-LAST:event_jButton_ingresarUsuarioActionPerformed
 
     /**
