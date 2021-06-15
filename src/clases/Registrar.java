@@ -110,7 +110,7 @@ public class Registrar extends javax.swing.JFrame {
         jLabel7.setText("jLabel7");
         jPanel_principal.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 70, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo1.jpg"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo2.png"))); // NOI18N
         jLabel6.setText("jLabel6");
         jPanel_principal.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 460));
 
