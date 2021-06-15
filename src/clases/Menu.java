@@ -18,6 +18,7 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -31,7 +32,7 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jButton_alta = new javax.swing.JButton();
-        jButton_cancelar = new javax.swing.JButton();
+        jButton_salida = new javax.swing.JButton();
         jButton_consultar = new javax.swing.JButton();
         jButton_salir = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -47,7 +48,7 @@ public class Menu extends javax.swing.JFrame {
         jButton_alta.setBackground(new java.awt.Color(204, 0, 0));
         jButton_alta.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
         jButton_alta.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_alta.setText("Nueva alta");
+        jButton_alta.setText("Registro");
         jButton_alta.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
         jButton_alta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_alta.addActionListener(new java.awt.event.ActionListener() {
@@ -57,23 +58,23 @@ public class Menu extends javax.swing.JFrame {
         });
         jPanel1.add(jButton_alta, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, 162, 50));
 
-        jButton_cancelar.setBackground(new java.awt.Color(204, 0, 0));
-        jButton_cancelar.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
-        jButton_cancelar.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_cancelar.setText("Cancelar");
-        jButton_cancelar.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
-        jButton_cancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton_cancelar.addActionListener(new java.awt.event.ActionListener() {
+        jButton_salida.setBackground(new java.awt.Color(204, 0, 0));
+        jButton_salida.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
+        jButton_salida.setForeground(new java.awt.Color(255, 153, 0));
+        jButton_salida.setText("SALIDA");
+        jButton_salida.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
+        jButton_salida.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton_salida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_cancelarActionPerformed(evt);
+                jButton_salidaActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton_cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, 162, 50));
+        jPanel1.add(jButton_salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, 162, 50));
 
         jButton_consultar.setBackground(new java.awt.Color(204, 0, 0));
         jButton_consultar.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
         jButton_consultar.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_consultar.setText("Consultar");
+        jButton_consultar.setText("CONSULTAS");
         jButton_consultar.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
         jButton_consultar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_consultar.addActionListener(new java.awt.event.ActionListener() {
@@ -127,14 +128,17 @@ public class Menu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton_altaActionPerformed
 
-    private void jButton_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancelarActionPerformed
+    private void jButton_salidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_salidaActionPerformed
         // TODO add your handling code here:
       
-    }//GEN-LAST:event_jButton_cancelarActionPerformed
+    }//GEN-LAST:event_jButton_salidaActionPerformed
 
     private void jButton_consultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_consultarActionPerformed
         // TODO add your handling code here:
-  
+        Consultas cons=new Consultas();
+        cons.setVisible(true);
+        
+        
     }//GEN-LAST:event_jButton_consultarActionPerformed
 
     private void jButton_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_salirActionPerformed
@@ -183,8 +187,8 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton_alta;
-    private javax.swing.JButton jButton_cancelar;
     private javax.swing.JButton jButton_consultar;
+    private javax.swing.JButton jButton_salida;
     private javax.swing.JButton jButton_salir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
