@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-06-2021 a las 00:22:14
+-- Tiempo de generación: 09-06-2021 a las 03:06:24
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.5
 
@@ -43,10 +43,10 @@ CREATE TABLE `habitacion` (
 
 CREATE TABLE `huesped` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(45) NOT NULL,
-  `no_telefono` int(11) NOT NULL,
+  `nombre` varchar(60) NOT NULL,
+  `no_telefono` int(20) NOT NULL,
   `domicilio` varchar(60) NOT NULL,
-  `fec_nac` varchar(10) NOT NULL,
+  `fec_nac` date NOT NULL,
   `curp` varchar(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -61,6 +61,14 @@ CREATE TABLE `usuario` (
   `nombre` varchar(45) NOT NULL,
   `contraseña` varchar(16) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`nom_usuario`, `nombre`, `contraseña`) VALUES
+(' RGR_Boss ', ' Benitp  ', ' 1234 '),
+('Renegade', 'Jorge', '1234er');
 
 --
 -- Índices para tablas volcadas
