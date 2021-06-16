@@ -162,7 +162,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         jButtonVerHabit.setText("Ver habitaciones");
         getContentPane().add(jButtonVerHabit, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo1.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo4.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 470));
 

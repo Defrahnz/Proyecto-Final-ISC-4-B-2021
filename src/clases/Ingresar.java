@@ -86,7 +86,7 @@ public class Ingresar extends javax.swing.JFrame {
         jLabel4.setText("jLabel4");
         jPanel_principal.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 30, 70, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo1.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo4.png"))); // NOI18N
         jLabel3.setText("jLabel3");
         jPanel_principal.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 460));
 

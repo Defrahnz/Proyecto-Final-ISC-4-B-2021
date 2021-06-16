@@ -142,7 +142,7 @@
           <Font name="Baskerville Old Face" size="18" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/fondo1.jpg"/>
+          <Image iconType="3" name="/Imagenes/fondo1.jpg"/>
         </Property>
       </Properties>
       <Constraints>
