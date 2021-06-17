@@ -118,16 +118,25 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="B&#xfa;squeda por Nombre: "/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_busquedaNomActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton_busquedaRep">
           <Properties>
             <Property name="text" type="java.lang.String" value="B&#xfa;squeda por fecha de recepci&#xf3;n:"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_busquedaRepActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton_busquedaHab">
           <Properties>
             <Property name="text" type="java.lang.String" value="B&#xfa;squeda por habitaci&#xf3;n:"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_busquedaHabActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField_busquedaNom">
         </Component>

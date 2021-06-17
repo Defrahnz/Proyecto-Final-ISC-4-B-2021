@@ -6,6 +6,7 @@
 package clases;
 
 import conector.MySqlConn;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -50,10 +51,25 @@ public class Vacantes extends javax.swing.JFrame {
         jPanel_principal.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 0, 0)), "BUSQUEDA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Castellar", 1, 13))); // NOI18N
 
         jRadioButton_busquedaNom.setText("Búsqueda por Nombre: ");
+        jRadioButton_busquedaNom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton_busquedaNomActionPerformed(evt);
+            }
+        });
 
         jRadioButton_busquedaRep.setText("Búsqueda por fecha de recepción:");
+        jRadioButton_busquedaRep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton_busquedaRepActionPerformed(evt);
+            }
+        });
 
         jRadioButton_busquedaHab.setText("Búsqueda por habitación:");
+        jRadioButton_busquedaHab.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton_busquedaHabActionPerformed(evt);
+            }
+        });
 
         jButton_siguiente.setBackground(new java.awt.Color(204, 0, 0));
         jButton_siguiente.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
@@ -129,7 +145,65 @@ public class Vacantes extends javax.swing.JFrame {
 
     private void jButton_siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_siguienteActionPerformed
         // TODO add your handling code here:
+         String nom,rep;
+        int hab;
+         int n=0;
+         nom=this.jTextField_busquedaNom.getText().trim();
+         rep=this.jTextField_busquedaRep.getText().trim();
+         hab=Integer.parseInt(this.jTextField_busquedaHab.getText());
+         if(!nom.isEmpty() || !rep.isEmpty() ){
+          if (this.jRadioButton_busquedaNom.isSelected()) {
+               String query = "SELECT * FROM `huesped` WHERE `nombre`= ' " + nom + " ' ";
+            try {
+                this.conn.rs.last();
+                n = this.conn.rs.getRow();
+                this.conn.rs.first();
+            } catch (Exception ex) {
+                System.out.println("Error 1");
+            }
+           /* Menu ventana=new Menu();
+            ventana.setVisible(true);
+            dispose();*/
+       
+        }
+         if (this.jRadioButton_busquedaRep.isSelected()) {
+     
+         }
+         if (this.jRadioButton_busquedaHab.isSelected()) {
+            String query = "SELECT * FROM `habitaciones` WHERE `hab`= ' " + hab + " ' ";
+            try {
+                this.conn.rs.last();
+                n = this.conn.rs.getRow();
+                this.conn.rs.first();
+            } catch (Exception ex) {
+                System.out.println("Error 1");
+            }
+         }
+         }else{
+             JOptionPane.showMessageDialog(this, "Advertencia. Este campo no puede quedar vacio");
+         }
     }//GEN-LAST:event_jButton_siguienteActionPerformed
+
+    private void jRadioButton_busquedaNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_busquedaNomActionPerformed
+        // TODO add your handling code here:
+           this.jTextField_busquedaHab.setEditable(false);
+           this.jTextField_busquedaRep.setEditable(false);
+           this.jTextField_busquedaNom.setEditable(true);
+    }//GEN-LAST:event_jRadioButton_busquedaNomActionPerformed
+
+    private void jRadioButton_busquedaRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_busquedaRepActionPerformed
+        // TODO add your handling code here:
+           this.jTextField_busquedaHab.setEditable(false);
+           this.jTextField_busquedaRep.setEditable(true);
+           this.jTextField_busquedaNom.setEditable(false);
+    }//GEN-LAST:event_jRadioButton_busquedaRepActionPerformed
+
+    private void jRadioButton_busquedaHabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_busquedaHabActionPerformed
+        // TODO add your handling code here:
+           this.jTextField_busquedaHab.setEditable(true);
+           this.jTextField_busquedaRep.setEditable(false);
+           this.jTextField_busquedaNom.setEditable(false);
+    }//GEN-LAST:event_jRadioButton_busquedaHabActionPerformed
 
     /**
      * @param args the command line arguments

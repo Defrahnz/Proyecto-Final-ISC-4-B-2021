@@ -145,7 +145,7 @@ public class Consultas extends javax.swing.JFrame {
 
     private void jButton_vacantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_vacantesActionPerformed
         // TODO add your handling code here:
-        Ingresar ventana=new Ingresar();
+        Vacantes ventana=new Vacantes();
         ventana.setVisible(true);
         //  this.setVisible(false);
         // this.dispose();
