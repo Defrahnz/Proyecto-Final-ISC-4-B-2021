@@ -29,20 +29,27 @@ public class Consultas extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel_panel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jButton_galeria = new javax.swing.JButton();
         jButton_ingresos = new javax.swing.JButton();
         jButton_vacantes = new javax.swing.JButton();
         jButton_regresar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Consultas");
 
         jPanel_panel1.setToolTipText("Consultas");
+        jPanel_panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logo mini amarillo.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel_panel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 90, -1));
 
         jButton_galeria.setBackground(new java.awt.Color(204, 0, 0));
         jButton_galeria.setFont(new java.awt.Font("Castellar", 1, 24)); // NOI18N
         jButton_galeria.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_galeria.setText("GALERIA");
+        jButton_galeria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GALERIAbutton.png"))); // NOI18N
         jButton_galeria.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
         jButton_galeria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_galeria.addActionListener(new java.awt.event.ActionListener() {
@@ -50,11 +57,12 @@ public class Consultas extends javax.swing.JFrame {
                 jButton_galeriaActionPerformed(evt);
             }
         });
+        jPanel_panel1.add(jButton_galeria, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 236, 60));
 
         jButton_ingresos.setBackground(new java.awt.Color(204, 0, 0));
         jButton_ingresos.setFont(new java.awt.Font("Castellar", 1, 24)); // NOI18N
         jButton_ingresos.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_ingresos.setText("INGRESos");
+        jButton_ingresos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/INGRESOSbutton.png"))); // NOI18N
         jButton_ingresos.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
         jButton_ingresos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_ingresos.addActionListener(new java.awt.event.ActionListener() {
@@ -62,11 +70,12 @@ public class Consultas extends javax.swing.JFrame {
                 jButton_ingresosActionPerformed(evt);
             }
         });
+        jPanel_panel1.add(jButton_ingresos, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, 236, 60));
 
         jButton_vacantes.setBackground(new java.awt.Color(204, 0, 0));
         jButton_vacantes.setFont(new java.awt.Font("Castellar", 1, 24)); // NOI18N
         jButton_vacantes.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_vacantes.setText("vACANTES");
+        jButton_vacantes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/VACANTESbutton.png"))); // NOI18N
         jButton_vacantes.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
         jButton_vacantes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_vacantes.addActionListener(new java.awt.event.ActionListener() {
@@ -74,11 +83,12 @@ public class Consultas extends javax.swing.JFrame {
                 jButton_vacantesActionPerformed(evt);
             }
         });
+        jPanel_panel1.add(jButton_vacantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 236, 60));
 
         jButton_regresar.setBackground(new java.awt.Color(204, 0, 0));
         jButton_regresar.setFont(new java.awt.Font("Castellar", 1, 24)); // NOI18N
         jButton_regresar.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_regresar.setText("REGRESAR");
+        jButton_regresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGRESARbuttonG.png"))); // NOI18N
         jButton_regresar.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
         jButton_regresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_regresar.addActionListener(new java.awt.event.ActionListener() {
@@ -86,33 +96,11 @@ public class Consultas extends javax.swing.JFrame {
                 jButton_regresarActionPerformed(evt);
             }
         });
+        jPanel_panel1.add(jButton_regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, 236, 60));
 
-        javax.swing.GroupLayout jPanel_panel1Layout = new javax.swing.GroupLayout(jPanel_panel1);
-        jPanel_panel1.setLayout(jPanel_panel1Layout);
-        jPanel_panel1Layout.setHorizontalGroup(
-            jPanel_panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_panel1Layout.createSequentialGroup()
-                .addGap(260, 260, 260)
-                .addGroup(jPanel_panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton_regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton_vacantes, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton_ingresos, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton_galeria, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(278, Short.MAX_VALUE))
-        );
-        jPanel_panel1Layout.setVerticalGroup(
-            jPanel_panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_panel1Layout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(jButton_galeria, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton_ingresos, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton_vacantes, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton_regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo1.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel_panel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -199,6 +187,8 @@ public class Consultas extends javax.swing.JFrame {
     private javax.swing.JButton jButton_ingresos;
     private javax.swing.JButton jButton_regresar;
     private javax.swing.JButton jButton_vacantes;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel_panel1;
     // End of variables declaration//GEN-END:variables
 }

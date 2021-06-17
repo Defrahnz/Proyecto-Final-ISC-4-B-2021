@@ -123,15 +123,15 @@ public class RegistrarHuesped extends javax.swing.JFrame {
 
         jButtonRegistrarH.setBackground(new java.awt.Color(204, 0, 0));
         jButtonRegistrarH.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
-        jButtonRegistrarH.setForeground(new java.awt.Color(255, 102, 0));
-        jButtonRegistrarH.setText("Registrar");
+        jButtonRegistrarH.setForeground(new java.awt.Color(255, 153, 0));
+        jButtonRegistrarH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGISTRARbutton.png"))); // NOI18N
         jButtonRegistrarH.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
         jButtonRegistrarH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRegistrarHActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonRegistrarH, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, 100, 40));
+        getContentPane().add(jButtonRegistrarH, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 230, 50));
 
         jLabel10.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jLabel10.setText("Tiempo de hospedaje");

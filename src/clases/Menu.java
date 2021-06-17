@@ -48,7 +48,7 @@ public class Menu extends javax.swing.JFrame {
         jButton_alta.setBackground(new java.awt.Color(204, 0, 0));
         jButton_alta.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
         jButton_alta.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_alta.setText("Registro");
+        jButton_alta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGISTRObotton.png"))); // NOI18N
         jButton_alta.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
         jButton_alta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_alta.addActionListener(new java.awt.event.ActionListener() {
@@ -56,12 +56,12 @@ public class Menu extends javax.swing.JFrame {
                 jButton_altaActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton_alta, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, 162, 50));
+        jPanel1.add(jButton_alta, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, -1, 50));
 
         jButton_salida.setBackground(new java.awt.Color(204, 0, 0));
         jButton_salida.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
         jButton_salida.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_salida.setText("SALIDA");
+        jButton_salida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/SALIDAbutton.png"))); // NOI18N
         jButton_salida.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
         jButton_salida.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_salida.addActionListener(new java.awt.event.ActionListener() {
@@ -69,12 +69,12 @@ public class Menu extends javax.swing.JFrame {
                 jButton_salidaActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton_salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, 162, 50));
+        jPanel1.add(jButton_salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, -1, 50));
 
         jButton_consultar.setBackground(new java.awt.Color(204, 0, 0));
         jButton_consultar.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
         jButton_consultar.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_consultar.setText("CONSULTAS");
+        jButton_consultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CONSULTAbutton.png"))); // NOI18N
         jButton_consultar.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
         jButton_consultar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_consultar.addActionListener(new java.awt.event.ActionListener() {
@@ -87,7 +87,7 @@ public class Menu extends javax.swing.JFrame {
         jButton_salir.setBackground(new java.awt.Color(204, 0, 0));
         jButton_salir.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
         jButton_salir.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_salir.setText("Salir");
+        jButton_salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/SALIRBUTTON.png"))); // NOI18N
         jButton_salir.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
         jButton_salir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_salir.addActionListener(new java.awt.event.ActionListener() {
@@ -101,9 +101,9 @@ public class Menu extends javax.swing.JFrame {
         jLabel2.setText("Bienvenido \"USUARIO\"");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 13, 353, 33));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logomini.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logo mini amarillo.png"))); // NOI18N
         jLabel4.setText("jLabel4");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 70, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, 90, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo3.png"))); // NOI18N
         jLabel1.setText("jLabel1");

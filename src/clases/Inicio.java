@@ -80,7 +80,7 @@ public class Inicio extends javax.swing.JFrame {
         jButton_registrar.setBackground(new java.awt.Color(204, 0, 0));
         jButton_registrar.setFont(new java.awt.Font("Castellar", 1, 24)); // NOI18N
         jButton_registrar.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_registrar.setText("REGISTRAR");
+        jButton_registrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGISTRARbutton.png"))); // NOI18N
         jButton_registrar.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
         jButton_registrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_registrar.addActionListener(new java.awt.event.ActionListener() {
@@ -93,7 +93,7 @@ public class Inicio extends javax.swing.JFrame {
         jButton_ingresar.setBackground(new java.awt.Color(204, 0, 0));
         jButton_ingresar.setFont(new java.awt.Font("Castellar", 1, 24)); // NOI18N
         jButton_ingresar.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_ingresar.setText("INGRESAR");
+        jButton_ingresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/INGRESARbutton.png"))); // NOI18N
         jButton_ingresar.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
         jButton_ingresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_ingresar.addActionListener(new java.awt.event.ActionListener() {
