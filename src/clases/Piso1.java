@@ -71,6 +71,7 @@ public class Piso1 extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("1");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -82,30 +83,35 @@ public class Piso1 extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("2");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 60, 40));
 
         jButton3.setBackground(new java.awt.Color(255, 153, 0));
         jButton3.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("3");
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 60, 40));
 
         jButton4.setBackground(new java.awt.Color(255, 153, 0));
         jButton4.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("4");
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 60, 40));
 
         jButton5.setBackground(new java.awt.Color(255, 153, 0));
         jButton5.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("5");
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 60, 40));
 
         jButton6.setBackground(new java.awt.Color(255, 153, 0));
         jButton6.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("6");
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -117,6 +123,7 @@ public class Piso1 extends javax.swing.JFrame {
         jButton7.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("7");
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 80, 60, 40));
 
         jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
@@ -131,6 +138,7 @@ public class Piso1 extends javax.swing.JFrame {
         jButton8.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton8.setForeground(new java.awt.Color(255, 255, 255));
         jButton8.setText("8");
+        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -142,42 +150,49 @@ public class Piso1 extends javax.swing.JFrame {
         jButton9.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
         jButton9.setText("9");
+        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 60, 40));
 
         jButton10.setBackground(new java.awt.Color(255, 102, 0));
         jButton10.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton10.setForeground(new java.awt.Color(255, 255, 255));
         jButton10.setText("10");
+        jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 60, 40));
 
         jButton11.setBackground(new java.awt.Color(255, 102, 0));
         jButton11.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton11.setForeground(new java.awt.Color(255, 255, 255));
         jButton11.setText("11");
+        jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 60, 40));
 
         jButton12.setBackground(new java.awt.Color(255, 102, 0));
         jButton12.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton12.setForeground(new java.awt.Color(255, 255, 255));
         jButton12.setText("12");
+        jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 60, 40));
 
         jButton13.setBackground(new java.awt.Color(255, 102, 0));
         jButton13.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton13.setForeground(new java.awt.Color(255, 255, 255));
         jButton13.setText("13");
+        jButton13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 60, 40));
 
         jButton14.setBackground(new java.awt.Color(255, 102, 0));
         jButton14.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton14.setForeground(new java.awt.Color(255, 255, 255));
         jButton14.setText("14");
+        jButton14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 60, 40));
 
         jButton15.setBackground(new java.awt.Color(255, 102, 0));
         jButton15.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton15.setForeground(new java.awt.Color(255, 255, 255));
         jButton15.setText("15");
+        jButton15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, 60, 40));
 
         jLabel4.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
