@@ -462,7 +462,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         } catch (DocumentException ex) {
             Logger.getLogger(RegistrarHuesped.class.getName()).log(Level.SEVERE, null, ex);
         }
-        //Hola mundo///
+        
         
         try
         {
