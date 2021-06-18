@@ -125,7 +125,9 @@ public class Menu extends javax.swing.JFrame {
 
     private void jButton_altaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_altaActionPerformed
         // TODO add your handling code here:
-
+        RegistrarHuesped ventana=new RegistrarHuesped();
+        ventana.setVisible(rootPaneCheckingEnabled);
+        dispose();
     }//GEN-LAST:event_jButton_altaActionPerformed
 
     private void jButton_salidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_salidaActionPerformed
