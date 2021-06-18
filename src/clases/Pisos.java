@@ -7,6 +7,9 @@ package clases;
 
 //Hola mundo**//
 
+
+
+
 /**
  *
  * @author aldop
@@ -19,6 +22,7 @@ public class Pisos extends javax.swing.JFrame {
     public Pisos() {
         initComponents();
         this.setLocationRelativeTo(null);
+        dispose();
     }
 
     /**
@@ -35,6 +39,7 @@ public class Pisos extends javax.swing.JFrame {
         jButtonPiso1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -75,6 +80,14 @@ public class Pisos extends javax.swing.JFrame {
         jLabel4.setText("jLabel4");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, 70, -1));
 
+        jButton1.setText("Volver");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 410, -1, -1));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo1.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, 700, -1));
@@ -86,13 +99,20 @@ public class Pisos extends javax.swing.JFrame {
         // TODO add your handling code here:
         Piso1 ventana=new Piso1();
         ventana.setVisible(true);
+        
     }//GEN-LAST:event_jButtonPiso1ActionPerformed
 
     private void jButtonPiso2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiso2ActionPerformed
         // TODO add your handling code here:
         Piso2 ventana=new Piso2();
         ventana.setVisible(true);
+        
     }//GEN-LAST:event_jButtonPiso2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,6 +151,7 @@ public class Pisos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonPiso1;
     private javax.swing.JButton jButtonPiso2;
     private javax.swing.JLabel jLabel1;
