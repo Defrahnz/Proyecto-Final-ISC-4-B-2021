@@ -96,7 +96,7 @@ public class Registrar extends javax.swing.JFrame {
         jButton_registrarUsuario.setBackground(new java.awt.Color(204, 0, 0));
         jButton_registrarUsuario.setFont(new java.awt.Font("Castellar", 1, 14)); // NOI18N
         jButton_registrarUsuario.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_registrarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGRESAR1.png"))); // NOI18N
+        jButton_registrarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/registrar1.png"))); // NOI18N
         jButton_registrarUsuario.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(255, 153, 0)));
         jButton_registrarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_registrarUsuario.addActionListener(new java.awt.event.ActionListener() {

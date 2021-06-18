@@ -145,6 +145,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         jButtonRegistrarH.setForeground(new java.awt.Color(255, 102, 0));
         jButtonRegistrarH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/registrarmini.png"))); // NOI18N
         jButtonRegistrarH.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
+        jButtonRegistrarH.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonRegistrarH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRegistrarHActionPerformed(evt);
@@ -241,6 +242,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         jButtonTicket.setForeground(new java.awt.Color(255, 102, 0));
         jButtonTicket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/boucher.png"))); // NOI18N
         jButtonTicket.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
+        jButtonTicket.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonTicket.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonTicketActionPerformed(evt);

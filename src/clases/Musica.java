@@ -42,6 +42,7 @@ public class Musica extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton_play.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Play.png"))); // NOI18N
+        jButton_play.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_play.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_playActionPerformed(evt);
@@ -50,6 +51,7 @@ public class Musica extends javax.swing.JFrame {
         getContentPane().add(jButton_play, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 57, 71, 64));
 
         jButton_pause.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Pause.png"))); // NOI18N
+        jButton_pause.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_pause.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_pauseActionPerformed(evt);

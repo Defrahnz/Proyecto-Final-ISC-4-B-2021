@@ -59,21 +59,21 @@ public class Ingresar extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jLabel1.setText("Contraseña:");
-        jPanel_principal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 96, 36));
+        jPanel_principal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 96, 36));
 
         jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jLabel2.setText("Usuario:");
-        jPanel_principal.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, 96, 36));
+        jPanel_principal.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 96, 36));
 
         jTextField_ingresarUsuario.setFont(new java.awt.Font("Britannic Bold", 0, 13)); // NOI18N
-        jPanel_principal.add(jTextField_ingresarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 270, -1));
-        jPanel_principal.add(jPasswordField_ingresarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 270, -1));
+        jPanel_principal.add(jTextField_ingresarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 270, -1));
+        jPanel_principal.add(jPasswordField_ingresarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, 270, -1));
 
         jButton_ingresarUsuario.setBackground(new java.awt.Color(204, 0, 0));
         jButton_ingresarUsuario.setFont(new java.awt.Font("Castellar", 1, 14)); // NOI18N
         jButton_ingresarUsuario.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_ingresarUsuario.setText("INGRESAR");
-        jButton_ingresarUsuario.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(204, 0, 0)));
+        jButton_ingresarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/INGRESAR.png"))); // NOI18N
+        jButton_ingresarUsuario.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
         jButton_ingresarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_ingresarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
@@ -85,11 +85,11 @@ public class Ingresar extends javax.swing.JFrame {
                 jButton_ingresarUsuarioActionPerformed(evt);
             }
         });
-        jPanel_principal.add(jButton_ingresarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 250, 147, -1));
+        jPanel_principal.add(jButton_ingresarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 147, 30));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logomini.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logo mini amarillo.png"))); // NOI18N
         jLabel4.setText("jLabel4");
-        jPanel_principal.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 30, 70, -1));
+        jPanel_principal.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 60, 90, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo4.png"))); // NOI18N
         jLabel3.setText("jLabel3");
