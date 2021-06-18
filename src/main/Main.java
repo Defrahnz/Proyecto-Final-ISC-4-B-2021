@@ -8,6 +8,7 @@ package main;
 
 
 import clases.Inicio;
+import clases.Musica;
 import conector.MySqlConn;
 
 
@@ -20,6 +21,7 @@ public class Main {
     MySqlConn objconn=new MySqlConn();
     public Main(){
         new Inicio(objconn).setVisible(true);
+        new Musica().setVisible(true);
         
     }
     public static void main(String[] args) {
