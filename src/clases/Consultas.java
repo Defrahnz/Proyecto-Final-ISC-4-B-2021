@@ -118,15 +118,16 @@ public class Consultas extends javax.swing.JFrame {
 
     private void jButton_galeriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_galeriaActionPerformed
         // TODO add your handling code here:
-        
+        Galeria gal=new Galeria();
+        gal.setVisible(true);
+        dispose();
         //  this.setVisible(false);
         // this.dispose();
     }//GEN-LAST:event_jButton_galeriaActionPerformed
 
     private void jButton_ingresosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ingresosActionPerformed
         // TODO add your handling code here:
-        Ingresar ventana=new Ingresar();
-        ventana.setVisible(true);
+        
         //  this.setVisible(false);
         // this.dispose();
     }//GEN-LAST:event_jButton_ingresosActionPerformed
