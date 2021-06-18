@@ -55,7 +55,7 @@ public class MySqlConn {
         //information_schema
         int rModif=0;
         try {
-            stmt = conn.createStatement();
+             stmt = conn.createStatement();
              rModif= stmt.executeUpdate(query);
         }
         catch (SQLException ex){
@@ -87,6 +87,10 @@ public class MySqlConn {
                if (conn!=null)  conn.close();
             } catch (SQLException sqlEx) { } // ignore
             rs = null;
+    }
+
+    public Statement createStatment() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

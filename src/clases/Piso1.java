@@ -5,19 +5,36 @@
  */
 package clases;
 
+
+import clases.RegistrarHuesped;
+import conector.MySqlConn;
+import javax.swing.JOptionPane;
+
+    
 /**
  *
  * @author lapiz
  */
 public class Piso1 extends javax.swing.JFrame {
-
+   
+    
     /**
      * Creates new form Piso2
      */
-    public Piso1() {
-        initComponents();
+    MySqlConn conn=new MySqlConn();
+    
+    public Piso1(MySqlConn conn) {
+        this.conn = conn;
     }
 
+    Piso1() {
+        initComponents();
+        this.setLocationRelativeTo(null);
+    }
+    
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -54,6 +71,11 @@ public class Piso1 extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 60, 40));
 
         jButton2.setBackground(new java.awt.Color(255, 153, 0));
@@ -163,18 +185,40 @@ public class Piso1 extends javax.swing.JFrame {
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo1.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 470));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 470));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void jButtonhab8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonhab8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_jButtonhab8ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void jButtonhab6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonhab6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_jButtonhab6ActionPerformed
+
+    private void jButtonhab1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonhab1ActionPerformed
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_jButtonhab1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        RegistrarHuesped r = new RegistrarHuesped();
+        r.setVisible(true);
+        RegistrarHuesped.jTextFieldNoHabitacion.setText("1");
+         //int x = Integer.parseInt(RegistrarHuesped.jTextFieldNoHabitacion.getText().trim());
+        
+           RegistrarHuesped.jRadioButtondoble.setEnabled(false);
+           RegistrarHuesped.jRadioButtontriple.setEnabled(false);
+          
+           
+        JOptionPane.showMessageDialog(this, "Ha elejido usted la habitacion No 1");
+        
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -235,4 +279,6 @@ public class Piso1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
+
+  
 }
