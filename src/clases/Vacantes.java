@@ -44,6 +44,8 @@ public class Vacantes extends javax.swing.JFrame {
         jTextField_busquedaRep = new javax.swing.JTextField();
         jTextField_busquedaHab = new javax.swing.JTextField();
         jButton_siguiente = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea_mostrar = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vacantes disponibles");
@@ -83,49 +85,59 @@ public class Vacantes extends javax.swing.JFrame {
             }
         });
 
+        jTextArea_mostrar.setEditable(false);
+        jTextArea_mostrar.setColumns(20);
+        jTextArea_mostrar.setRows(5);
+        jTextArea_mostrar.setToolTipText("");
+        jScrollPane1.setViewportView(jTextArea_mostrar);
+
         javax.swing.GroupLayout jPanel_principalLayout = new javax.swing.GroupLayout(jPanel_principal);
         jPanel_principal.setLayout(jPanel_principalLayout);
         jPanel_principalLayout.setHorizontalGroup(
             jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_principalLayout.createSequentialGroup()
-                .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel_principalLayout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel_principalLayout.createSequentialGroup()
-                                .addComponent(jRadioButton_busquedaHab)
-                                .addGap(53, 53, 53)
-                                .addComponent(jTextField_busquedaHab))
-                            .addGroup(jPanel_principalLayout.createSequentialGroup()
-                                .addComponent(jRadioButton_busquedaRep)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField_busquedaRep))
-                            .addGroup(jPanel_principalLayout.createSequentialGroup()
-                                .addComponent(jRadioButton_busquedaNom)
-                                .addGap(58, 58, 58)
-                                .addComponent(jTextField_busquedaNom, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jRadioButton_busquedaNom)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField_busquedaNom, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel_principalLayout.createSequentialGroup()
-                        .addGap(228, 228, 228)
-                        .addComponent(jButton_siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(156, Short.MAX_VALUE))
+                        .addComponent(jRadioButton_busquedaRep)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField_busquedaRep, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel_principalLayout.createSequentialGroup()
+                        .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton_siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButton_busquedaHab))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField_busquedaHab, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel_principalLayout.setVerticalGroup(
             jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_principalLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton_busquedaNom)
-                    .addComponent(jTextField_busquedaNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton_busquedaRep)
-                    .addComponent(jTextField_busquedaRep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton_busquedaHab)
-                    .addComponent(jTextField_busquedaHab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
-                .addComponent(jButton_siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel_principalLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel_principalLayout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButton_busquedaNom)
+                            .addComponent(jTextField_busquedaNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButton_busquedaRep)
+                            .addComponent(jTextField_busquedaRep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButton_busquedaHab)
+                            .addComponent(jTextField_busquedaHab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(47, 47, 47)
+                        .addComponent(jButton_siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(81, Short.MAX_VALUE))
         );
 
@@ -151,7 +163,7 @@ public class Vacantes extends javax.swing.JFrame {
          nom=this.jTextField_busquedaNom.getText().trim();
          rep=this.jTextField_busquedaRep.getText().trim();
          hab=Integer.parseInt(this.jTextField_busquedaHab.getText());
-         if(!nom.isEmpty() || !rep.isEmpty() ){
+         if(!nom.isEmpty() || !rep.isEmpty() || hab > 0 ){
           if (this.jRadioButton_busquedaNom.isSelected()) {
                String query = "SELECT * FROM `huesped` WHERE `nombre`= ' " + nom + " ' ";
             try {
@@ -161,16 +173,14 @@ public class Vacantes extends javax.swing.JFrame {
             } catch (Exception ex) {
                 System.out.println("Error 1");
             }
-           /* Menu ventana=new Menu();
-            ventana.setVisible(true);
-            dispose();*/
+           
        
         }
          if (this.jRadioButton_busquedaRep.isSelected()) {
      
          }
          if (this.jRadioButton_busquedaHab.isSelected()) {
-            String query = "SELECT * FROM `habitaciones` WHERE `hab`= ' " + hab + " ' ";
+            String query = "SELECT * FROM `huesped` WHERE `no_hab`= ' " + hab + " ' ";
             try {
                 this.conn.rs.last();
                 n = this.conn.rs.getRow();
@@ -182,6 +192,7 @@ public class Vacantes extends javax.swing.JFrame {
          }else{
              JOptionPane.showMessageDialog(this, "Advertencia. Este campo no puede quedar vacio");
          }
+         
     }//GEN-LAST:event_jButton_siguienteActionPerformed
 
     private void jRadioButton_busquedaNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_busquedaNomActionPerformed
@@ -247,6 +258,8 @@ public class Vacantes extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton_busquedaHab;
     private javax.swing.JRadioButton jRadioButton_busquedaNom;
     private javax.swing.JRadioButton jRadioButton_busquedaRep;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea_mostrar;
     private javax.swing.JTextField jTextField_busquedaHab;
     private javax.swing.JTextField jTextField_busquedaNom;
     private javax.swing.JTextField jTextField_busquedaRep;
