@@ -7,10 +7,21 @@ package clases;
 
 import clases.Pisos;
 import conector.MySqlConn;
-import java.sql.Date;
 import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.pdf.PdfWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.FontFactory;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.BaseColor;
+import com.itextpdf.text.Chunk;
+import com.itextpdf.text.Image;
 
 /**
  *
@@ -35,6 +46,11 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         jLabel1Extra.setVisible(false);
         jLabel2Extras.setVisible(false);
+    }
+    public void crearPDF () throws Exception{
+    
+  
+    
     }
 
     /**
@@ -63,13 +79,16 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         jRadioButtonsencilla = new javax.swing.JRadioButton();
         jRadioButtondoble = new javax.swing.JRadioButton();
         jRadioButtontriple = new javax.swing.JRadioButton();
-        jCalendarFechaRegistro = new com.toedter.calendar.JCalendar();
         jButtonVerHabit = new javax.swing.JButton();
         jComboBoxSencilla = new javax.swing.JComboBox<>();
         jComboBoxDoble = new javax.swing.JComboBox<>();
         jComboBoxTriple = new javax.swing.JComboBox<>();
         jLabel1Extra = new javax.swing.JLabel();
         jLabel2Extras = new javax.swing.JLabel();
+        jButtonTicket = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jTextFieldNoHabitacion = new javax.swing.JTextField();
+        jCalendarFechaRegistro = new com.toedter.calendar.JCalendar();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -78,15 +97,15 @@ public class RegistrarHuesped extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jLabel2.setText("Nombre");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jLabel3.setText("Numero de telefono");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jLabel4.setText("Nos visita de");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jLabel5.setText("Fecha de registro");
@@ -94,44 +113,44 @@ public class RegistrarHuesped extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jLabel6.setText("Tipo de habitacion");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, -1, 20));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, 20));
 
         jTextFieldNombreH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldNombreHActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldNombreH, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 260, 30));
+        getContentPane().add(jTextFieldNombreH, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 260, 30));
 
         jTextFieldTelefonoH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldTelefonoHActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldTelefonoH, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 260, 30));
+        getContentPane().add(jTextFieldTelefonoH, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 260, 30));
 
         jTextFieldUbicacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldUbicacionActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldUbicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 210, 260, 30));
+        getContentPane().add(jTextFieldUbicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 260, 30));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logomini.png"))); // NOI18N
         jLabel7.setText("jLabel7");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 70, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 70, -1));
 
         jButtonRegistrarH.setBackground(new java.awt.Color(204, 0, 0));
         jButtonRegistrarH.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
-        jButtonRegistrarH.setForeground(new java.awt.Color(255, 153, 0));
-        jButtonRegistrarH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGISTRARbutton.png"))); // NOI18N
+        jButtonRegistrarH.setForeground(new java.awt.Color(255, 102, 0));
+        jButtonRegistrarH.setText("Registrar");
         jButtonRegistrarH.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
         jButtonRegistrarH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRegistrarHActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonRegistrarH, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 230, 50));
+        getContentPane().add(jButtonRegistrarH, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, 100, 40));
 
         jLabel10.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jLabel10.setText("Tiempo de hospedaje");
@@ -155,7 +174,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
                 jRadioButtonsencillaActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButtonsencilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 80, 30));
+        getContentPane().add(jRadioButtonsencilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 80, 30));
 
         tipohabiradiobutton.add(jRadioButtondoble);
         jRadioButtondoble.setText("Doble");
@@ -164,7 +183,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
                 jRadioButtondobleActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButtondoble, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 90, 30));
+        getContentPane().add(jRadioButtondoble, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 90, 30));
 
         tipohabiradiobutton.add(jRadioButtontriple);
         jRadioButtontriple.setText("Triple");
@@ -173,8 +192,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
                 jRadioButtontripleActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButtontriple, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 70, 30));
-        getContentPane().add(jCalendarFechaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, 460, 230));
+        getContentPane().add(jRadioButtontriple, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 70, 30));
 
         jButtonVerHabit.setText("Ver habitaciones");
         jButtonVerHabit.addActionListener(new java.awt.event.ActionListener() {
@@ -182,7 +200,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
                 jButtonVerHabitActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonVerHabit, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
+        getContentPane().add(jButtonVerHabit, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, -1, -1));
 
         jComboBoxSencilla.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " 1", " 2", " 3", " " }));
         jComboBoxSencilla.addActionListener(new java.awt.event.ActionListener() {
@@ -218,6 +236,23 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         jLabel2Extras.setText("2 personas extras!");
         getContentPane().add(jLabel2Extras, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 380, -1, 20));
 
+        jButtonTicket.setBackground(new java.awt.Color(204, 0, 0));
+        jButtonTicket.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
+        jButtonTicket.setForeground(new java.awt.Color(255, 102, 0));
+        jButtonTicket.setText("Boucher");
+        jButtonTicket.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTicketActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonTicket, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, 100, 40));
+
+        jLabel8.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
+        jLabel8.setText("No Habitacion");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, -1, -1));
+        getContentPane().add(jTextFieldNoHabitacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 100, 30));
+        getContentPane().add(jCalendarFechaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 60, 350, 240));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo1.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 470));
@@ -236,7 +271,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
     private void jButtonRegistrarHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarHActionPerformed
     // TODO add your handling code here:
     String NombreH,NumT,Ubica,tiempoHosp,NumPer = null;
-    String seleccionR = null;
+    String seleccionR = null,nohab;
     
     NombreH = this.jTextFieldNombreH.getText().trim();
     NumT = this.jTextFieldTelefonoH.getText().trim();
@@ -257,10 +292,11 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         }
         String FechaObtenida = df.format(jCalendarFechaRegistro.getDate());
         tiempoHosp = this.jTextFieldtiempoHospedaje.getText().trim();
+        nohab = this.jTextFieldNoHabitacion.getText();
        
         
-        String part1="INSERT INTO `huesped` (`nombre`, `num_tel`, `origen`, `fecha_reg`, `tiempo_hos`, `no_personas`, `tipo_hab`) VALUES ( " ;
-        String part2=" ' "+NombreH+" ', '"+NumT+" ', ' "+Ubica+"  ', ' "+FechaObtenida+"  ', ' "+tiempoHosp+"  ', ' "+NumPer+" ', ' "+seleccionR+" ' ); ";
+        String part1="INSERT INTO `huesped` (`nombre`, `num_tel`, `origen`, `fecha_reg`, `tiempo_hos`, `no_personas`, `tipo_hab`, `no_hab`) VALUES ( " ;
+        String part2=" ' "+NombreH+" ', '"+NumT+" ', ' "+Ubica+"  ', ' "+FechaObtenida+"  ', ' "+tiempoHosp+"  ', ' "+NumPer+" ', ' "+seleccionR+" ', ' "+nohab+" ' ); ";
         String query=part1+part2;
         int j=this.conn.Update(query);
         JOptionPane.showMessageDialog(this, "Huesped Registrado Correctamente "+NombreH);
@@ -276,7 +312,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         // TODO add your handling code here:
          jComboBoxDoble.setVisible(false);
          jComboBoxTriple.setVisible(false);
-         jComboBoxSencilla.setVisible(true);
+         jComboBoxSencilla.setVisible(true);//hola mundo
     }//GEN-LAST:event_jRadioButtonsencillaActionPerformed
 
     private void jButtonVerHabitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerHabitActionPerformed
@@ -363,7 +399,84 @@ public class RegistrarHuesped extends javax.swing.JFrame {
          }
     }//GEN-LAST:event_jComboBoxTripleActionPerformed
 
-    /**
+    private void jButtonTicketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTicketActionPerformed
+        // TODO add your handling code here:
+        Document documento = new Document();
+
+        // Se crea el OutputStream para el fichero donde queremos dejar el pdf.
+        FileOutputStream ficheroPdf = null;
+        try {
+            ficheroPdf = new FileOutputStream("C:\\Users\\lapiz\\OneDrive\\Escritorio\\pruebaPDF.pdf");
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(RegistrarHuesped.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        try {
+            // Se asocia el documento al OutputStream y se indica que el espaciado entre
+            // lineas sera de 20. Esta llamada debe hacerse antes de abrir el documento
+            PdfWriter.getInstance(documento,ficheroPdf).setInitialLeading(20);
+        } catch (DocumentException ex) {
+            Logger.getLogger(RegistrarHuesped.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        // Se abre el documento.
+        documento.open();
+        String seleccionR = null,NumPer = null,PE = null;
+         if (this.jRadioButtonsencilla.isSelected()){
+         seleccionR = this.jRadioButtonsencilla.getText();
+         NumPer = (String) this.jComboBoxSencilla.getSelectedItem();
+           
+       }
+       else if (this.jRadioButtondoble.isSelected()){
+         seleccionR = this.jRadioButtondoble.getText();
+         NumPer = (String) this.jComboBoxDoble.getSelectedItem();
+         
+             
+            
+       }
+       else if (this.jRadioButtontriple.isSelected()){
+         seleccionR = this.jRadioButtontriple.getText();
+         NumPer = (String) this.jComboBoxTriple.getSelectedItem();
+        
+             
+        }
+         String FechaObtenida = df.format(jCalendarFechaRegistro.getDate());
+        try {
+            documento.add(new Paragraph("    B O U C H E R    ",FontFactory.getFont("arial",22,Font.ITALIC,BaseColor.RED)));
+            documento.add(new Paragraph(" "));
+        } catch (DocumentException ex) {
+            Logger.getLogger(RegistrarHuesped.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        try { 
+            
+            documento.add(new Paragraph("Nombre: "+jTextFieldNombreH.getText().trim()));
+            documento.add(new Paragraph("Número de Telefono: "+jTextFieldTelefonoH.getText().trim()));
+            documento.add(new Paragraph("Ciudad de Origen: "+this.jTextFieldUbicacion.getText().trim()));
+            documento.add(new Paragraph("Tipo de Habitación: "+seleccionR));
+            documento.add(new Paragraph("Numero de Personas: "+NumPer));
+            documento.add(new Paragraph("Fecha de Ingreso: "+FechaObtenida));
+            documento.add(new Paragraph("Tiempo de Hospedaje: "+this.jTextFieldtiempoHospedaje.getText().trim()));
+            //documento.add(new Paragraph("Personas Extra: "+PE));
+            
+        } catch (DocumentException ex) {
+            Logger.getLogger(RegistrarHuesped.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        try
+        {
+                Image foto = Image.getInstance("C:\\Users\\lapiz\\OneDrive\\Escritorio\\Proyecto Final_ISC 4 B UAA\\src\\Imagenes\\Logo.png");
+                foto.scaleToFit(100, 100);
+                foto.setAlignment(Chunk.ALIGN_MIDDLE);
+                documento.add(foto);
+        }
+        catch ( Exception e )
+        {
+        }
+       documento.close();
+    }//GEN-LAST:event_jButtonTicketActionPerformed
+      /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -400,6 +513,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonRegistrarH;
+    private javax.swing.JButton jButtonTicket;
     private javax.swing.JButton jButtonVerHabit;
     private com.toedter.calendar.JCalendar jCalendarFechaRegistro;
     private javax.swing.JComboBox<String> jComboBoxDoble;
@@ -416,13 +530,21 @@ public class RegistrarHuesped extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JRadioButton jRadioButtondoble;
-    private javax.swing.JRadioButton jRadioButtonsencilla;
-    private javax.swing.JRadioButton jRadioButtontriple;
+    private javax.swing.JLabel jLabel8;
+    public static javax.swing.JRadioButton jRadioButtondoble;
+    public static javax.swing.JRadioButton jRadioButtonsencilla;
+    public static javax.swing.JRadioButton jRadioButtontriple;
+    public static javax.swing.JTextField jTextFieldNoHabitacion;
     private javax.swing.JTextField jTextFieldNombreH;
     private javax.swing.JTextField jTextFieldTelefonoH;
     private javax.swing.JTextField jTextFieldUbicacion;
     private javax.swing.JTextField jTextFieldtiempoHospedaje;
     private javax.swing.ButtonGroup tipohabiradiobutton;
     // End of variables declaration//GEN-END:variables
+
+   
+
+  
+
+    
 }
