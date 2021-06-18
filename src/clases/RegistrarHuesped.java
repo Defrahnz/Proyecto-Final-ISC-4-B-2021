@@ -432,7 +432,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
          NumPer = (String) this.jComboBoxDoble.getSelectedItem();
          
              
-            
+        //holoa //    
        }
        else if (this.jRadioButtontriple.isSelected()){
          seleccionR = this.jRadioButtontriple.getText();
