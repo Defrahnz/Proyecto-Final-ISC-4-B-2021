@@ -143,14 +143,14 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         jButtonRegistrarH.setBackground(new java.awt.Color(204, 0, 0));
         jButtonRegistrarH.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButtonRegistrarH.setForeground(new java.awt.Color(255, 102, 0));
-        jButtonRegistrarH.setText("Registrar");
-        jButtonRegistrarH.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
+        jButtonRegistrarH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/registrarmini.png"))); // NOI18N
+        jButtonRegistrarH.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
         jButtonRegistrarH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRegistrarHActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonRegistrarH, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, 100, 40));
+        getContentPane().add(jButtonRegistrarH, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 110, 30));
 
         jLabel10.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jLabel10.setText("Tiempo de hospedaje");
@@ -239,13 +239,14 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         jButtonTicket.setBackground(new java.awt.Color(204, 0, 0));
         jButtonTicket.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButtonTicket.setForeground(new java.awt.Color(255, 102, 0));
-        jButtonTicket.setText("Boucher");
+        jButtonTicket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/boucher.png"))); // NOI18N
+        jButtonTicket.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
         jButtonTicket.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonTicketActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonTicket, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, 100, 40));
+        getContentPane().add(jButtonTicket, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, 100, 30));
 
         jLabel8.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jLabel8.setText("No Habitacion");
