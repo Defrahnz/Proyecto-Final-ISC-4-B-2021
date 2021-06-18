@@ -6,6 +6,7 @@
 package clases;
 
 
+import clases.RegistrarHuesped;
 import conector.MySqlConn;
 import javax.swing.JOptionPane;
 

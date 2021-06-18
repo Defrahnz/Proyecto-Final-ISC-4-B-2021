@@ -423,7 +423,7 @@
     <Component class="com.toedter.calendar.JCalendar" name="jCalendarFechaRegistro">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="520" y="60" width="350" height="240"/>
+          <AbsoluteConstraints x="530" y="70" width="340" height="230"/>
         </Constraint>
       </Constraints>
     </Component>

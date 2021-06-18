@@ -5,7 +5,7 @@
  */
 package clases;
 
-import clases.Pisos;
+
 import conector.MySqlConn;
 import java.text.DateFormat;
 import javax.swing.JOptionPane;
@@ -251,7 +251,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         jLabel8.setText("No Habitacion");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, -1, -1));
         getContentPane().add(jTextFieldNoHabitacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 100, 30));
-        getContentPane().add(jCalendarFechaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 60, 350, 240));
+        getContentPane().add(jCalendarFechaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, 340, 230));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo1.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -442,7 +442,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         }
          String FechaObtenida = df.format(jCalendarFechaRegistro.getDate());
         try {
-            documento.add(new Paragraph("    B O U C H E R    ",FontFactory.getFont("arial",22,Font.ITALIC,BaseColor.RED)));
+            documento.add(new Paragraph("    B O U C H E R  REGISTRO  ",FontFactory.getFont("arial",22,Font.ITALIC,BaseColor.RED)));
             documento.add(new Paragraph(" "));
         } catch (DocumentException ex) {
             Logger.getLogger(RegistrarHuesped.class.getName()).log(Level.SEVERE, null, ex);
