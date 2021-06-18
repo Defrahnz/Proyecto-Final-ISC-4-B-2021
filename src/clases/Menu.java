@@ -51,6 +51,11 @@ public class Menu extends javax.swing.JFrame {
         jButton_alta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGISTRObotton.png"))); // NOI18N
         jButton_alta.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
         jButton_alta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton_alta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton_altaMouseEntered(evt);
+            }
+        });
         jButton_alta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_altaActionPerformed(evt);
@@ -151,6 +156,10 @@ public class Menu extends javax.swing.JFrame {
           System.exit(0);
        }
     }//GEN-LAST:event_jButton_salirActionPerformed
+
+    private void jButton_altaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_altaMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_altaMouseEntered
 
     /**
      * @param args the command line arguments

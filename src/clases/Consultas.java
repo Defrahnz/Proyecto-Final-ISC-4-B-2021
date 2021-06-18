@@ -52,6 +52,11 @@ public class Consultas extends javax.swing.JFrame {
         jButton_galeria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GALERIAbutton.png"))); // NOI18N
         jButton_galeria.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
         jButton_galeria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton_galeria.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton_galeriaMouseClicked(evt);
+            }
+        });
         jButton_galeria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_galeriaActionPerformed(evt);
@@ -147,6 +152,10 @@ public class Consultas extends javax.swing.JFrame {
         //  this.setVisible(false);
         // this.dispose();
     }//GEN-LAST:event_jButton_regresarActionPerformed
+
+    private void jButton_galeriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_galeriaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_galeriaMouseClicked
 
     /**
      * @param args the command line arguments

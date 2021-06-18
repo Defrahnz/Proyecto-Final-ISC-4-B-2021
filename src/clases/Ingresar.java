@@ -75,6 +75,11 @@ public class Ingresar extends javax.swing.JFrame {
         jButton_ingresarUsuario.setText("INGRESAR");
         jButton_ingresarUsuario.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(204, 0, 0)));
         jButton_ingresarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton_ingresarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton_ingresarUsuarioMouseReleased(evt);
+            }
+        });
         jButton_ingresarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_ingresarUsuarioActionPerformed(evt);
@@ -128,6 +133,10 @@ public class Ingresar extends javax.swing.JFrame {
         }
         dispose();
     }//GEN-LAST:event_jButton_ingresarUsuarioActionPerformed
+
+    private void jButton_ingresarUsuarioMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_ingresarUsuarioMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_ingresarUsuarioMouseReleased
 
     /**
      * @param args the command line arguments
