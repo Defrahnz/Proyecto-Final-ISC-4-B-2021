@@ -65,6 +65,7 @@ public class Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel_principal = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton_registrar = new javax.swing.JButton();
         jButton_ingresar = new javax.swing.JButton();
@@ -77,6 +78,10 @@ public class Inicio extends javax.swing.JFrame {
 
         jPanel_principal.setBackground(new java.awt.Color(255, 247, 155));
         jPanel_principal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setFont(new java.awt.Font("Castellar", 1, 10)); // NOI18N
+        jLabel5.setText("Av pricnipal #154 Sector Industrial, Puerto Vallarta México");
+        jPanel_principal.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, -1, 30));
 
         jLabel3.setFont(new java.awt.Font("Castellar", 1, 14)); // NOI18N
         jLabel3.setText("Tu seguridad es nuestra prioridad");
@@ -192,6 +197,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel_principal;
     // End of variables declaration//GEN-END:variables
 }
