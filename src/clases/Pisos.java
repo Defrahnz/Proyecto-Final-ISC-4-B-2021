@@ -48,36 +48,40 @@ public class Pisos extends javax.swing.JFrame {
         jButtonPiso2.setBackground(new java.awt.Color(240, 0, 0));
         jButtonPiso2.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButtonPiso2.setForeground(new java.awt.Color(255, 102, 0));
-        jButtonPiso2.setText("Piso 2");
+        jButtonPiso2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/PISO2.png"))); // NOI18N
+        jButtonPiso2.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
+        jButtonPiso2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonPiso2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonPiso2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonPiso2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 70, -1, -1));
+        getContentPane().add(jButtonPiso2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 80, 160, 40));
 
         jButtonPiso1.setBackground(new java.awt.Color(240, 0, 0));
         jButtonPiso1.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jButtonPiso1.setForeground(new java.awt.Color(255, 102, 0));
-        jButtonPiso1.setText("Piso 1");
+        jButtonPiso1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/PISO1.png"))); // NOI18N
+        jButtonPiso1.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
+        jButtonPiso1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonPiso1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonPiso1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonPiso1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, -1));
+        getContentPane().add(jButtonPiso1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 160, 40));
 
         jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jLabel2.setText("Piso");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logomini.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logo.png"))); // NOI18N
         jLabel4.setText("jLabel4");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, 70, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 210, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo1.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, 700, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

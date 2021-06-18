@@ -46,11 +46,12 @@ public class Vacantes extends javax.swing.JFrame {
         jButton_siguiente = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea_mostrar = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vacantes disponibles");
 
-        jPanel_principal.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 0, 0)), "BUSQUEDA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Castellar", 1, 13))); // NOI18N
+        jPanel_principal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jRadioButton_busquedaNom.setText("Búsqueda por Nombre: ");
         jRadioButton_busquedaNom.addActionListener(new java.awt.event.ActionListener() {
@@ -58,6 +59,7 @@ public class Vacantes extends javax.swing.JFrame {
                 jRadioButton_busquedaNomActionPerformed(evt);
             }
         });
+        jPanel_principal.add(jRadioButton_busquedaNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
 
         jRadioButton_busquedaRep.setText("Búsqueda por fecha de recepción:");
         jRadioButton_busquedaRep.addActionListener(new java.awt.event.ActionListener() {
@@ -65,6 +67,7 @@ public class Vacantes extends javax.swing.JFrame {
                 jRadioButton_busquedaRepActionPerformed(evt);
             }
         });
+        jPanel_principal.add(jRadioButton_busquedaRep, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, -1, -1));
 
         jRadioButton_busquedaHab.setText("Búsqueda por habitación:");
         jRadioButton_busquedaHab.addActionListener(new java.awt.event.ActionListener() {
@@ -72,18 +75,23 @@ public class Vacantes extends javax.swing.JFrame {
                 jRadioButton_busquedaHabActionPerformed(evt);
             }
         });
+        jPanel_principal.add(jRadioButton_busquedaHab, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, -1, -1));
+        jPanel_principal.add(jTextField_busquedaNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, 139, -1));
+        jPanel_principal.add(jTextField_busquedaRep, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 136, -1));
+        jPanel_principal.add(jTextField_busquedaHab, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 137, -1));
 
         jButton_siguiente.setBackground(new java.awt.Color(204, 0, 0));
         jButton_siguiente.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
         jButton_siguiente.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_siguiente.setText("SIGUIENTE");
-        jButton_siguiente.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 102, 0)));
+        jButton_siguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/SIGUIENTE1.png"))); // NOI18N
+        jButton_siguiente.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
         jButton_siguiente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_siguiente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_siguienteActionPerformed(evt);
             }
         });
+        jPanel_principal.add(jButton_siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 170, 50));
 
         jTextArea_mostrar.setEditable(false);
         jTextArea_mostrar.setColumns(20);
@@ -91,55 +99,11 @@ public class Vacantes extends javax.swing.JFrame {
         jTextArea_mostrar.setToolTipText("");
         jScrollPane1.setViewportView(jTextArea_mostrar);
 
-        javax.swing.GroupLayout jPanel_principalLayout = new javax.swing.GroupLayout(jPanel_principal);
-        jPanel_principal.setLayout(jPanel_principalLayout);
-        jPanel_principalLayout.setHorizontalGroup(
-            jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_principalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel_principalLayout.createSequentialGroup()
-                        .addComponent(jRadioButton_busquedaNom)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField_busquedaNom, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel_principalLayout.createSequentialGroup()
-                        .addComponent(jRadioButton_busquedaRep)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField_busquedaRep, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel_principalLayout.createSequentialGroup()
-                        .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton_siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jRadioButton_busquedaHab))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField_busquedaHab, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel_principalLayout.setVerticalGroup(
-            jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_principalLayout.createSequentialGroup()
-                .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel_principalLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel_principalLayout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton_busquedaNom)
-                            .addComponent(jTextField_busquedaNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton_busquedaRep)
-                            .addComponent(jTextField_busquedaRep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton_busquedaHab)
-                            .addComponent(jTextField_busquedaHab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(47, 47, 47)
-                        .addComponent(jButton_siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(81, Short.MAX_VALUE))
-        );
+        jPanel_principal.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 100, 271, 244));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo1.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel_principal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 470));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -254,6 +218,7 @@ public class Vacantes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton_siguiente;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel_principal;
     private javax.swing.JRadioButton jRadioButton_busquedaHab;
     private javax.swing.JRadioButton jRadioButton_busquedaNom;

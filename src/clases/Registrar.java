@@ -62,53 +62,53 @@ public class Registrar extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Felix Titling", 1, 13)); // NOI18N
         jLabel1.setText("Nombre:");
-        jPanel_principal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, -1, -1));
+        jPanel_principal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, -1, -1));
         jPanel_principal.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 130, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Felix Titling", 1, 13)); // NOI18N
         jLabel3.setText("Nombre de Usuario:");
-        jPanel_principal.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, -1));
+        jPanel_principal.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Felix Titling", 1, 13)); // NOI18N
         jLabel4.setText("Contraseña:");
-        jPanel_principal.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, -1, -1));
+        jPanel_principal.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Felix Titling", 1, 13)); // NOI18N
         jLabel5.setText("Confirmar Contraseña:");
-        jPanel_principal.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
+        jPanel_principal.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, -1, -1));
 
         jTextField_nom.setBackground(new java.awt.Color(204, 204, 204));
         jTextField_nom.setFont(new java.awt.Font("Microsoft Himalaya", 0, 24)); // NOI18N
-        jPanel_principal.add(jTextField_nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 218, -1));
+        jPanel_principal.add(jTextField_nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 218, -1));
 
         jTextField_username.setBackground(new java.awt.Color(204, 204, 204));
         jTextField_username.setFont(new java.awt.Font("Microsoft Himalaya", 0, 24)); // NOI18N
-        jPanel_principal.add(jTextField_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 218, -1));
+        jPanel_principal.add(jTextField_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 218, -1));
 
         jPasswordField_pass.setBackground(new java.awt.Color(204, 204, 204));
         jPasswordField_pass.setFont(new java.awt.Font("Microsoft Himalaya", 0, 24)); // NOI18N
-        jPanel_principal.add(jPasswordField_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 218, -1));
+        jPanel_principal.add(jPasswordField_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 218, -1));
 
         jPasswordField_confPass.setBackground(new java.awt.Color(204, 204, 204));
         jPasswordField_confPass.setFont(new java.awt.Font("Microsoft Himalaya", 0, 24)); // NOI18N
-        jPanel_principal.add(jPasswordField_confPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 218, -1));
+        jPanel_principal.add(jPasswordField_confPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 218, -1));
 
         jButton_registrarUsuario.setBackground(new java.awt.Color(204, 0, 0));
         jButton_registrarUsuario.setFont(new java.awt.Font("Castellar", 1, 14)); // NOI18N
         jButton_registrarUsuario.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_registrarUsuario.setText("Registrar");
-        jButton_registrarUsuario.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(204, 0, 0)));
+        jButton_registrarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/REGRESAR1.png"))); // NOI18N
+        jButton_registrarUsuario.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(255, 153, 0)));
         jButton_registrarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_registrarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_registrarUsuarioActionPerformed(evt);
             }
         });
-        jPanel_principal.add(jButton_registrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 147, -1));
+        jPanel_principal.add(jButton_registrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, -1, 30));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logomini.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logo mini amarillo.png"))); // NOI18N
         jLabel7.setText("jLabel7");
-        jPanel_principal.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 70, -1));
+        jPanel_principal.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, 90, 120));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo2.png"))); // NOI18N
         jLabel6.setText("jLabel6");
