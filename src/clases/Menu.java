@@ -35,7 +35,7 @@ public class Menu extends javax.swing.JFrame {
         jButton_salida = new javax.swing.JButton();
         jButton_consultar = new javax.swing.JButton();
         jButton_salir = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel_bienvenido = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -102,9 +102,9 @@ public class Menu extends javax.swing.JFrame {
         });
         jPanel1.add(jButton_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, 162, 40));
 
-        jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
-        jLabel2.setText("Bienvenido \"USUARIO\"");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 13, 353, 33));
+        jLabel_bienvenido.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
+        jLabel_bienvenido.setText("BIENVENIDO");
+        jPanel1.add(jLabel_bienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 13, 353, 33));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logo mini amarillo.png"))); // NOI18N
         jLabel4.setText("jLabel4");
@@ -202,8 +202,8 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButton_salida;
     private javax.swing.JButton jButton_salir;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel_bienvenido;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
