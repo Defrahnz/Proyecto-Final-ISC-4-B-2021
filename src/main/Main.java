@@ -7,6 +7,7 @@ package main;
 
 
 
+import clases.DatosA;
 import clases.Inicio;
 import clases.Musica;
 import conector.MySqlConn;
@@ -20,7 +21,7 @@ public class Main {
     //Este es un cambio
     MySqlConn objconn=new MySqlConn();
     public Main(){
-        new Inicio(objconn).setVisible(true);
+        new DatosA().setVisible(true);
         new Musica().setVisible(true);
         
     }
