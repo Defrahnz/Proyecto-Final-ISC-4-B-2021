@@ -6,6 +6,7 @@
 package clases;
 
 import conector.MySqlConn;
+import java.math.BigInteger;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
@@ -31,6 +32,21 @@ public class Ingresar extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         
+    }
+     public String MD5(String md5){
+        try{
+            java.security.MessageDigest md=java.security.MessageDigest.getInstance("MD5");
+            byte [] array =md.digest(md5.getBytes());
+            BigInteger num=new BigInteger(1,array);
+            String encString=num.toString(16);
+            while(encString.length()>32){
+                encString="0"+encString;
+            }
+            return encString;
+        }catch (java.security.NoSuchAlgorithmException e){
+            System.out.println("Error al encriptar");
+        }
+        return null;
     }
 
     /**
@@ -117,7 +133,7 @@ public class Ingresar extends javax.swing.JFrame {
         pass = String.valueOf(this.jPasswordField_ingresarUsuario.getPassword());
         if (!user.isEmpty()) {
 
-            String query = "SELECT * FROM `usuario` WHERE `nom_usuario`= ' " + user + " ' AND `contraseña`= ' " + pass + " ' ";
+            String query = "SELECT * FROM `usuario` WHERE `nom_usuario`= ' " + user + " ' AND `contraseña`= ' " + MD5(pass) + " ' ";
             try {
                 this.conn.rs.last();
                 n = this.conn.rs.getRow();

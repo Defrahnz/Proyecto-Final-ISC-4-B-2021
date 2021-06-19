@@ -6,6 +6,7 @@
 package clases;
 
 import conector.MySqlConn;
+import java.math.BigInteger;
 import javax.swing.JOptionPane;
 
 /**
@@ -28,6 +29,21 @@ public class Registrar extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         dispose();
+    }
+    public String MD5(String md5){
+        try{
+            java.security.MessageDigest md=java.security.MessageDigest.getInstance("MD5");
+            byte [] array =md.digest(md5.getBytes());
+            BigInteger num=new BigInteger(1,array);
+            String encString=num.toString(16);
+            while(encString.length()>32){
+                encString="0"+encString;
+            }
+            return encString;
+        }catch (java.security.NoSuchAlgorithmException e){
+            System.out.println("Error al encriptar");
+        }
+        return null;
     }
 
     /**
@@ -134,8 +150,9 @@ public class Registrar extends javax.swing.JFrame {
         nom=this.jTextField_nom.getText().trim();
         user=this.jTextField_username.getText().trim();
         pass=String.valueOf(this.jPasswordField_pass.getPassword());
+        
         String part1="INSERT INTO `usuario` (`nom_usuario`, `nombre`, `contraseña`) VALUES ( " ;
-        String part2=" ' "+user+" ', ' "+nom+"  ', ' "+pass+" ' ); ";
+        String part2=" ' "+user+" ', ' "+nom+"  ', ' "+MD5(pass)+" ' ); ";
         String query=part1+part2;
         int j=this.conn.Update(query);
         JOptionPane.showMessageDialog(this, "Usuario agregado correctamente. Bienvenido "+user);
