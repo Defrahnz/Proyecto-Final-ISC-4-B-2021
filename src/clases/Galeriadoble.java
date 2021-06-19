@@ -16,6 +16,7 @@ public class Galeriadoble extends javax.swing.JFrame {
      */
     public Galeriadoble() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

@@ -35,10 +35,11 @@ public class Pisos extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel3 = new javax.swing.JLabel();
-        jButtonPiso2 = new javax.swing.JButton();
         jButtonPiso1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jButtonPiso3 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,19 +49,6 @@ public class Pisos extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
         jLabel3.setText("Por favor! Elija el piso para ver las habitaciones disponibles.");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, -1));
-
-        jButtonPiso2.setBackground(new java.awt.Color(240, 0, 0));
-        jButtonPiso2.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
-        jButtonPiso2.setForeground(new java.awt.Color(255, 102, 0));
-        jButtonPiso2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/PISO2.png"))); // NOI18N
-        jButtonPiso2.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
-        jButtonPiso2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonPiso2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPiso2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButtonPiso2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 80, 160, 40));
 
         jButtonPiso1.setBackground(new java.awt.Color(240, 0, 0));
         jButtonPiso1.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
@@ -83,6 +71,30 @@ public class Pisos extends javax.swing.JFrame {
         jLabel4.setText("jLabel4");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 210, -1));
 
+        jButtonPiso3.setBackground(new java.awt.Color(240, 0, 0));
+        jButtonPiso3.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
+        jButtonPiso3.setForeground(new java.awt.Color(255, 102, 0));
+        jButtonPiso3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/PISO2.png"))); // NOI18N
+        jButtonPiso3.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
+        jButtonPiso3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonPiso3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPiso3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonPiso3, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 80, 160, 40));
+
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Volver");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 400, 100, 30));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo1.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
@@ -94,20 +106,23 @@ public class Pisos extends javax.swing.JFrame {
         // TODO add your handling code here:
         Piso1 ventana=new Piso1();
         ventana.setVisible(true);
-        
+        dispose();
     }//GEN-LAST:event_jButtonPiso1ActionPerformed
 
-    private void jButtonPiso2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiso2ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        RegistrarHuesped ventana=new RegistrarHuesped();
+        
+        ventana.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButtonPiso3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiso3ActionPerformed
         // TODO add your handling code here:
         Piso2 ventana=new Piso2();
         ventana.setVisible(true);
-        
-    }//GEN-LAST:event_jButtonPiso2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonPiso3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,8 +161,9 @@ public class Pisos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonPiso1;
-    private javax.swing.JButton jButtonPiso2;
+    private javax.swing.JButton jButtonPiso3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -22,6 +22,7 @@ public class DatosA extends javax.swing.JFrame {
      */
     public DatosA() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
     @Override
     public void paint (Graphics g){

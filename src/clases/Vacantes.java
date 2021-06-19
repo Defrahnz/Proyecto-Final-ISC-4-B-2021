@@ -6,26 +6,32 @@
 package clases;
 
 import conector.MySqlConn;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author nihil
+ * @author lapiz
  */
 public class Vacantes extends javax.swing.JFrame {
-    MySqlConn conn=new MySqlConn();
+
+     MySqlConn conn=new MySqlConn();
+
     /**
      * Creates new form Vacantes
      */
-    public Vacantes (MySqlConn coon){
-        initComponents();
-        this.setLocationRelativeTo(null);
-    }
     public Vacantes() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
-
+     public Vacantes(MySqlConn conn) {
+        this.conn = conn;
+         initComponents();
+        this.setLocationRelativeTo(null);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,150 +41,101 @@ public class Vacantes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        jPanel_principal = new javax.swing.JPanel();
-        jRadioButton_busquedaNom = new javax.swing.JRadioButton();
-        jRadioButton_busquedaRep = new javax.swing.JRadioButton();
-        jRadioButton_busquedaHab = new javax.swing.JRadioButton();
-        jTextField_busquedaNom = new javax.swing.JTextField();
-        jTextField_busquedaRep = new javax.swing.JTextField();
-        jTextField_busquedaHab = new javax.swing.JTextField();
-        jButton_siguiente = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea_mostrar = new javax.swing.JTextArea();
+        jTableDatos = new javax.swing.JTable();
+        jButtonBuscar = new javax.swing.JButton();
+        jTextFieldNombre = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Vacantes disponibles");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel_principal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jTableDatos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
 
-        jRadioButton_busquedaNom.setText("Búsqueda por Nombre: ");
-        jRadioButton_busquedaNom.addActionListener(new java.awt.event.ActionListener() {
+            }
+        ));
+        jScrollPane1.setViewportView(jTableDatos);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 530, 50));
+
+        jButtonBuscar.setBackground(new java.awt.Color(0, 102, 255));
+        jButtonBuscar.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
+        jButtonBuscar.setText("Buscar");
+        jButtonBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton_busquedaNomActionPerformed(evt);
+                jButtonBuscarActionPerformed(evt);
             }
         });
-        jPanel_principal.add(jRadioButton_busquedaNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
+        getContentPane().add(jButtonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, 90, 30));
+        getContentPane().add(jTextFieldNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 180, 30));
 
-        jRadioButton_busquedaRep.setText("Búsqueda por fecha de recepción:");
-        jRadioButton_busquedaRep.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
+        jLabel1.setText("Nombre del huesped:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
+
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Volver");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton_busquedaRepActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        jPanel_principal.add(jRadioButton_busquedaRep, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, 90, 30));
 
-        jRadioButton_busquedaHab.setText("Búsqueda por habitación:");
-        jRadioButton_busquedaHab.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton_busquedaHabActionPerformed(evt);
-            }
-        });
-        jPanel_principal.add(jRadioButton_busquedaHab, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, -1, -1));
-        jPanel_principal.add(jTextField_busquedaNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, 139, -1));
-        jPanel_principal.add(jTextField_busquedaRep, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 136, -1));
-        jPanel_principal.add(jTextField_busquedaHab, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 137, -1));
-
-        jButton_siguiente.setBackground(new java.awt.Color(204, 0, 0));
-        jButton_siguiente.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
-        jButton_siguiente.setForeground(new java.awt.Color(255, 153, 0));
-        jButton_siguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/SIGUIENTE1.png"))); // NOI18N
-        jButton_siguiente.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 153, 0)));
-        jButton_siguiente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton_siguiente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_siguienteActionPerformed(evt);
-            }
-        });
-        jPanel_principal.add(jButton_siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 170, 50));
-
-        jTextArea_mostrar.setEditable(false);
-        jTextArea_mostrar.setColumns(20);
-        jTextArea_mostrar.setRows(5);
-        jTextArea_mostrar.setToolTipText("");
-        jScrollPane1.setViewportView(jTextArea_mostrar);
-
-        jPanel_principal.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 100, 271, 244));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo1.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jPanel_principal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 470));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel_principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel_principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo3.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-380, -80, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton_siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_siguienteActionPerformed
+    private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
         // TODO add your handling code here:
-         String nom,rep;
-        int hab;
-         int n=0;
-         nom=this.jTextField_busquedaNom.getText().trim();
-         rep=this.jTextField_busquedaRep.getText().trim();
-         hab=Integer.parseInt(this.jTextField_busquedaHab.getText());
-         if(!nom.isEmpty() || !rep.isEmpty() || hab > 0 ){
-          if (this.jRadioButton_busquedaNom.isSelected()) {
-               String query = "SELECT * FROM `huesped` WHERE `nombre`= ' " + nom + " ' ";
-            try {
-                this.conn.rs.last();
-                n = this.conn.rs.getRow();
-                this.conn.rs.first();
-            } catch (Exception ex) {
-                System.out.println("Error 1");
-            }
-           
        
-        }
-         if (this.jRadioButton_busquedaRep.isSelected()) {
-     
-         }
-         if (this.jRadioButton_busquedaHab.isSelected()) {
-            String query = "SELECT * FROM `huesped` WHERE `no_hab`= ' " + hab + " ' ";
-            try {
-                this.conn.rs.last();
-                n = this.conn.rs.getRow();
-                this.conn.rs.first();
-            } catch (Exception ex) {
-                System.out.println("Error 1");
+            DefaultTableModel modelo = new DefaultTableModel();
+            modelo.addColumn("Nombre");
+            modelo.addColumn("No de Habitacion");
+            modelo.addColumn("Piso ");
+            
+            jTableDatos.setModel(modelo);
+            String nom = this.jTextFieldNombre.getText();
+            String sql = "select * from huesped where nombre = " + "' " +nom+ " '";
+            
+             conn.Consult(sql);
+            try{
+            String[] datos = new String[4];
+                datos[0] = conn.rs.getString(1);
+                datos[1] = conn.rs.getString(8);
+                
+                modelo.addRow(datos);
+               jTableDatos.setModel(modelo);
+               
+            } catch(SQLException ex){
+                JOptionPane.showMessageDialog(this, "Huésped NO Registrado...");
+                this.jTextFieldNombre.setText("");
             }
-         }
-         }else{
-             JOptionPane.showMessageDialog(this, "Advertencia. Este campo no puede quedar vacio");
-         }
-         
-    }//GEN-LAST:event_jButton_siguienteActionPerformed
+                  
+            
+              
+        
+    }//GEN-LAST:event_jButtonBuscarActionPerformed
 
-    private void jRadioButton_busquedaNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_busquedaNomActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-           this.jTextField_busquedaHab.setEditable(false);
-           this.jTextField_busquedaRep.setEditable(false);
-           this.jTextField_busquedaNom.setEditable(true);
-    }//GEN-LAST:event_jRadioButton_busquedaNomActionPerformed
-
-    private void jRadioButton_busquedaRepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_busquedaRepActionPerformed
-        // TODO add your handling code here:
-           this.jTextField_busquedaHab.setEditable(false);
-           this.jTextField_busquedaRep.setEditable(true);
-           this.jTextField_busquedaNom.setEditable(false);
-    }//GEN-LAST:event_jRadioButton_busquedaRepActionPerformed
-
-    private void jRadioButton_busquedaHabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_busquedaHabActionPerformed
-        // TODO add your handling code here:
-           this.jTextField_busquedaHab.setEditable(true);
-           this.jTextField_busquedaRep.setEditable(false);
-           this.jTextField_busquedaNom.setEditable(false);
-    }//GEN-LAST:event_jRadioButton_busquedaHabActionPerformed
+        Consultas ventana=new Consultas();
+        ventana.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,17 +173,12 @@ public class Vacantes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton_siguiente;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonBuscar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel_principal;
-    private javax.swing.JRadioButton jRadioButton_busquedaHab;
-    private javax.swing.JRadioButton jRadioButton_busquedaNom;
-    private javax.swing.JRadioButton jRadioButton_busquedaRep;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea_mostrar;
-    private javax.swing.JTextField jTextField_busquedaHab;
-    private javax.swing.JTextField jTextField_busquedaNom;
-    private javax.swing.JTextField jTextField_busquedaRep;
+    private javax.swing.JTable jTableDatos;
+    private javax.swing.JTextField jTextFieldNombre;
     // End of variables declaration//GEN-END:variables
 }

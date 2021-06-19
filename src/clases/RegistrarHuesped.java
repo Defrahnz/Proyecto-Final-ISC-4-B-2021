@@ -47,11 +47,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         jLabel1Extra.setVisible(false);
         jLabel2Extras.setVisible(false);
     }
-    public void crearPDF () throws Exception{
-    
-  
-    
-    }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -89,6 +85,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jTextFieldNoHabitacion = new javax.swing.JTextField();
         jCalendarFechaRegistro = new com.toedter.calendar.JCalendar();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -256,6 +253,17 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         getContentPane().add(jTextFieldNoHabitacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 100, 30));
         getContentPane().add(jCalendarFechaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, 340, 230));
 
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Regresar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, 110, 30));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo1.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 470));
@@ -296,7 +304,8 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         String FechaObtenida = df.format(jCalendarFechaRegistro.getDate());
         tiempoHosp = this.jTextFieldtiempoHospedaje.getText().trim();
         nohab = this.jTextFieldNoHabitacion.getText();
-       
+        
+        
         
         String part1="INSERT INTO `huesped` (`nombre`, `num_tel`, `origen`, `fecha_reg`, `tiempo_hos`, `no_personas`, `tipo_hab`, `no_hab`) VALUES ( " ;
         String part2=" ' "+NombreH+" ', '"+NumT+" ', ' "+Ubica+"  ', ' "+FechaObtenida+"  ', ' "+tiempoHosp+"  ', ' "+NumPer+" ', ' "+seleccionR+" ', ' "+nohab+" ' ); ";
@@ -409,7 +418,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         // Se crea el OutputStream para el fichero donde queremos dejar el pdf.
         FileOutputStream ficheroPdf = null;
         try {
-            ficheroPdf = new FileOutputStream("C:\\Users\\lapiz\\OneDrive\\Escritorio\\pruebaPDF.pdf");
+            ficheroPdf = new FileOutputStream("C:\\Users\\lapiz\\OneDrive\\Escritorio\\Registro.pdf");
         } catch (FileNotFoundException ex) {
             Logger.getLogger(RegistrarHuesped.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -479,6 +488,14 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         }
        documento.close();
     }//GEN-LAST:event_jButtonTicketActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+       Menu ventana=new Menu();
+        ventana.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
       /**
      * @param args the command line arguments
      */
@@ -515,6 +532,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonRegistrarH;
     private javax.swing.JButton jButtonTicket;
     private javax.swing.JButton jButtonVerHabit;

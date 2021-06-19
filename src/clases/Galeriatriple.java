@@ -16,6 +16,7 @@ public class Galeriatriple extends javax.swing.JFrame {
      */
     public Galeriatriple() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

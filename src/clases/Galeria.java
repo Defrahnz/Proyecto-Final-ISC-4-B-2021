@@ -18,6 +18,7 @@ public class Galeria extends javax.swing.JFrame {
      */
     public Galeria() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
    
 

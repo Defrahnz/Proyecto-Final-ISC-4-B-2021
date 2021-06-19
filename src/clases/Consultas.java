@@ -101,7 +101,7 @@ public class Consultas extends javax.swing.JFrame {
                 jButton_regresarActionPerformed(evt);
             }
         });
-        jPanel_panel1.add(jButton_regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, 236, 60));
+        jPanel_panel1.add(jButton_regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 160, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo1.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -142,7 +142,7 @@ public class Consultas extends javax.swing.JFrame {
         Vacantes ventana=new Vacantes();
         ventana.setVisible(true);
         //  this.setVisible(false);
-        // this.dispose();
+         this.dispose();
     }//GEN-LAST:event_jButton_vacantesActionPerformed
 
     private void jButton_regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_regresarActionPerformed

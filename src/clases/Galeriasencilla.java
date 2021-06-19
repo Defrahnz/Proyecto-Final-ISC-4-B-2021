@@ -16,6 +16,7 @@ public class Galeriasencilla extends javax.swing.JFrame {
      */
     public Galeriasencilla() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
